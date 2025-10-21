@@ -6,6 +6,7 @@ struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var viewModel = VideoViewModel()
     @State private var showPostVideoActions = false
+    @State private var hasUnwrapped = false
 
     var body: some View {
         ZStack {
@@ -23,6 +24,20 @@ struct ContentView: View {
                     }
                 )
                 .ignoresSafeArea()
+
+                // Gift unwrapping overlay
+                if !hasUnwrapped {
+                    GiftUnwrapView(onUnwrap: {
+                        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                            hasUnwrapped = true
+                        }
+                        // Start playing video after unwrap
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            player.play()
+                        }
+                    })
+                    .transition(.opacity)
+                }
             } else {
                 ErrorView()
             }
@@ -94,7 +109,7 @@ struct VideoPlayerView: View {
     var body: some View {
         VideoPlayer(player: player)
             .onAppear {
-                player.play()
+                // Don't auto-play - wait for unwrap gesture
                 viewModel.onVideoComplete = onVideoComplete
             }
     }
@@ -163,6 +178,115 @@ struct PostVideoActionsView: View {
             Spacer()
         }
         .padding()
+    }
+}
+
+struct GiftUnwrapView: View {
+    let onUnwrap: () -> Void
+    @State private var dragOffset: CGFloat = 0
+    @State private var isUnwrapping = false
+
+    var body: some View {
+        ZStack {
+            // Background gradient
+            LinearGradient(
+                colors: [Color.purple.opacity(0.8), Color.pink.opacity(0.8)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+
+            VStack(spacing: 40) {
+                Spacer()
+
+                // Gift box icon with shimmer effect
+                ZStack {
+                    Image(systemName: "gift.fill")
+                        .font(.system(size: 120))
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: [.yellow, .orange],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                        .shadow(color: .yellow.opacity(0.5), radius: 20)
+                        .scaleEffect(isUnwrapping ? 0.1 : 1.0)
+                        .opacity(isUnwrapping ? 0 : 1)
+
+                    // Sparkles
+                    if !isUnwrapping {
+                        ForEach(0..<8) { index in
+                            Image(systemName: "sparkle")
+                                .font(.system(size: 20))
+                                .foregroundColor(.yellow)
+                                .offset(
+                                    x: cos(Double(index) * .pi / 4) * 80,
+                                    y: sin(Double(index) * .pi / 4) * 80
+                                )
+                                .opacity(0.8)
+                        }
+                    }
+                }
+                .offset(y: dragOffset * 0.5)
+
+                VStack(spacing: 12) {
+                    Text("You've Received a Cameo!")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+
+                    Text("Swipe up to reveal your video")
+                        .font(.headline)
+                        .foregroundColor(.white.opacity(0.9))
+                        .padding(.horizontal)
+
+                    // Drag indicator
+                    Image(systemName: "chevron.compact.up")
+                        .font(.system(size: 40))
+                        .foregroundColor(.white.opacity(0.7))
+                        .offset(y: -10 + abs(sin(Date().timeIntervalSince1970 * 2) * 5))
+                        .animation(.easeInOut(duration: 1).repeatForever(autoreverses: true), value: Date())
+                }
+                .offset(y: dragOffset * 0.3)
+                .opacity(isUnwrapping ? 0 : 1)
+
+                Spacer()
+            }
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        // Only allow upward drag
+                        if value.translation.height < 0 {
+                            dragOffset = value.translation.height
+                        }
+                    }
+                    .onEnded { value in
+                        if value.translation.height < -100 {
+                            // Unwrap threshold reached
+                            isUnwrapping = true
+                            withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+                                dragOffset = -UIScreen.main.bounds.height
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                onUnwrap()
+                            }
+                        } else {
+                            // Reset if not dragged far enough
+                            withAnimation(.spring()) {
+                                dragOffset = 0
+                            }
+                        }
+                    }
+            )
+        }
+        .onAppear {
+            // Subtle breathing animation for gift box
+            withAnimation(.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
+                // Animation handled by sparkles
+            }
+        }
     }
 }
 
