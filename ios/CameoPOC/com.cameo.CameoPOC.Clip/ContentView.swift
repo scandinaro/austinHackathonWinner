@@ -27,15 +27,18 @@ struct ContentView: View {
 
                 // Gift unwrapping overlay
                 if !hasUnwrapped {
-                    GiftUnwrapView(onUnwrap: {
-                        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                            hasUnwrapped = true
-                        }
-                        // Start playing video after unwrap
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            player.play()
-                        }
-                    })
+                    GiftUnwrapView(
+                        onUnwrap: {
+                            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                                hasUnwrapped = true
+                            }
+                            // Start playing video after unwrap
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                player.play()
+                            }
+                        },
+                        player: player
+                    )
                     .transition(.opacity)
                 }
             } else {
@@ -183,108 +186,183 @@ struct PostVideoActionsView: View {
 
 struct GiftUnwrapView: View {
     let onUnwrap: () -> Void
-    @State private var dragOffset: CGFloat = 0
-    @State private var isUnwrapping = false
+    let player: AVPlayer
+
+    @State private var revealedPoints: [CGPoint] = []
+    @State private var revealPercentage: Double = 0
+    @State private var thumbnail: UIImage?
+    @State private var hasStartedRevealing = false
 
     var body: some View {
-        ZStack {
-            // Background gradient
-            LinearGradient(
-                colors: [Color.purple.opacity(0.8), Color.pink.opacity(0.8)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
+        GeometryReader { geometry in
+            ZStack {
+                // Video thumbnail (blurred initially, revealed by touch)
+                if let thumbnail = thumbnail {
+                    Image(uiImage: thumbnail)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipped()
+                } else {
+                    // Fallback gradient while thumbnail loads
+                    Color.black
+                }
 
-            VStack(spacing: 40) {
-                Spacer()
+                // Invisible ink overlay
+                Canvas { context, size in
+                    // Fill entire canvas with sparkle pattern
+                    context.fill(
+                        Path(CGRect(origin: .zero, size: size)),
+                        with: .color(.white.opacity(0.65))
+                    )
 
-                // Gift box icon with shimmer effect
-                ZStack {
-                    Image(systemName: "gift.fill")
-                        .font(.system(size: 120))
-                        .foregroundStyle(
-                            LinearGradient(
-                                colors: [.yellow, .orange],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
+                    // "Erase" revealed areas
+                    for point in revealedPoints {
+                        let circlePath = Circle()
+                            .path(in: CGRect(
+                                x: point.x - 40,
+                                y: point.y - 40,
+                                width: 80,
+                                height: 80
+                            ))
+
+                        context.blendMode = .destinationOut
+                        context.fill(circlePath, with: .color(.white))
+                    }
+                }
+                .gesture(
+                    DragGesture(minimumDistance: 0)
+                        .onChanged { value in
+                            if !hasStartedRevealing {
+                                hasStartedRevealing = true
+                            }
+
+                            // Add revealed point (sample every few points to avoid massive overlap)
+                            let lastPoint = revealedPoints.last
+                            let shouldAddPoint = lastPoint == nil ||
+                                sqrt(pow(value.location.x - lastPoint!.x, 2) + pow(value.location.y - lastPoint!.y, 2)) > 20
+
+                            if shouldAddPoint {
+                                revealedPoints.append(value.location)
+                            }
+
+                            // Calculate reveal percentage using circle radius (40) and accounting for overlap
+                            let totalArea = geometry.size.width * geometry.size.height
+                            let circleArea = Double.pi * 40 * 40 // Area of each reveal circle
+                            let revealedArea = Double(revealedPoints.count) * circleArea * 0.7 // 0.7 factor to account for overlap
+                            revealPercentage = min(revealedArea / totalArea, 1.0)
+
+                            // Auto-reveal when threshold reached
+                            if revealPercentage > 0.85 {
+                                withAnimation(.easeOut(duration: 0.8)) {
+                                    revealPercentage = 1.0
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                    onUnwrap()
+                                }
+                            }
+                        }
+                )
+
+                // Sparkle overlay effect
+                if !hasStartedRevealing {
+                    ZStack {
+                        // Shimmer effect
+                        LinearGradient(
+                            colors: [
+                                Color.white.opacity(0),
+                                Color.white.opacity(0.3),
+                                Color.white.opacity(0)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
                         )
-                        .shadow(color: .yellow.opacity(0.5), radius: 20)
-                        .scaleEffect(isUnwrapping ? 0.1 : 1.0)
-                        .opacity(isUnwrapping ? 0 : 1)
 
-                    // Sparkles
-                    if !isUnwrapping {
-                        ForEach(0..<8) { index in
+                        // Sparkles scattered around
+                        ForEach(0..<20, id: \.self) { index in
                             Image(systemName: "sparkle")
-                                .font(.system(size: 20))
-                                .foregroundColor(.yellow)
-                                .offset(
-                                    x: cos(Double(index) * .pi / 4) * 80,
-                                    y: sin(Double(index) * .pi / 4) * 80
+                                .foregroundColor(.yellow.opacity(0.6))
+                                .font(.system(size: CGFloat.random(in: 12...24)))
+                                .position(
+                                    x: CGFloat.random(in: 0...geometry.size.width),
+                                    y: CGFloat.random(in: 0...geometry.size.height)
                                 )
-                                .opacity(0.8)
                         }
                     }
+                    .allowsHitTesting(false)
                 }
-                .offset(y: dragOffset * 0.5)
 
-                VStack(spacing: 12) {
-                    Text("You've Received a Cameo!")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
+                // Instruction text
+                if !hasStartedRevealing {
+                    VStack {
+                        Spacer()
 
-                    Text("Swipe up to reveal your video")
-                        .font(.headline)
-                        .foregroundColor(.white.opacity(0.9))
-                        .padding(.horizontal)
+                        VStack(spacing: 12) {
+                            Image(systemName: "hand.draw")
+                                .font(.system(size: 40))
+                                .foregroundColor(.white)
 
-                    // Drag indicator
-                    Image(systemName: "chevron.compact.up")
-                        .font(.system(size: 40))
-                        .foregroundColor(.white.opacity(0.7))
-                        .offset(y: -10 + abs(sin(Date().timeIntervalSince1970 * 2) * 5))
-                        .animation(.easeInOut(duration: 1).repeatForever(autoreverses: true), value: Date())
+                            Text("Swipe to reveal your Cameo")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 12)
+                                .background(Color.black.opacity(0.6))
+                                .cornerRadius(20)
+                        }
+                        .padding(.bottom, 60)
+                    }
+                    .allowsHitTesting(false)
                 }
-                .offset(y: dragOffset * 0.3)
-                .opacity(isUnwrapping ? 0 : 1)
 
-                Spacer()
+                // Progress indicator
+                if hasStartedRevealing && revealPercentage < 0.85 {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Text("\(Int(revealPercentage * 100))%")
+                                .font(.caption)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(8)
+                                .background(Color.black.opacity(0.6))
+                                .cornerRadius(8)
+                                .padding()
+                        }
+                        Spacer()
+                    }
+                    .allowsHitTesting(false)
+                }
             }
-            .gesture(
-                DragGesture()
-                    .onChanged { value in
-                        // Only allow upward drag
-                        if value.translation.height < 0 {
-                            dragOffset = value.translation.height
-                        }
-                    }
-                    .onEnded { value in
-                        if value.translation.height < -100 {
-                            // Unwrap threshold reached
-                            isUnwrapping = true
-                            withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
-                                dragOffset = -UIScreen.main.bounds.height
-                            }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                                onUnwrap()
-                            }
-                        } else {
-                            // Reset if not dragged far enough
-                            withAnimation(.spring()) {
-                                dragOffset = 0
-                            }
-                        }
-                    }
-            )
         }
+        .ignoresSafeArea()
         .onAppear {
-            // Subtle breathing animation for gift box
-            withAnimation(.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
-                // Animation handled by sparkles
+            generateThumbnail()
+        }
+    }
+
+    private func generateThumbnail() {
+        guard let currentItem = player.currentItem else { return }
+
+        let asset = currentItem.asset
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+        imageGenerator.appliesPreferredTrackTransform = true
+        imageGenerator.maximumSize = CGSize(width: 1920, height: 1080)
+
+        let time = CMTime(seconds: 1, preferredTimescale: 600)
+
+        imageGenerator.generateCGImageAsynchronously(for: time) { cgImage, actualTime, error in
+            if let error = error {
+                print("⚠️ Failed to generate thumbnail: \(error)")
+                return
+            }
+
+            guard let cgImage = cgImage else { return }
+
+            let uiImage = UIImage(cgImage: cgImage)
+
+            DispatchQueue.main.async {
+                self.thumbnail = uiImage
             }
         }
     }
