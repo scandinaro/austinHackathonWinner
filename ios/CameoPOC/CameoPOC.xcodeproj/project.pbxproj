@@ -1,0 +1,1008 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F242BFF52EA8227C00FC7F79 /* com.cameo.CameoPOC.Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = F242BFD32EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F242BFB32EA820F200FC7F79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F242BF9D2EA820F100FC7F79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F242BFA42EA820F100FC7F79;
+			remoteInfo = CameoPOC;
+		};
+		F242BFBD2EA820F200FC7F79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F242BF9D2EA820F100FC7F79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F242BFA42EA820F100FC7F79;
+			remoteInfo = CameoPOC;
+		};
+		F242BFE22EA8227B00FC7F79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F242BF9D2EA820F100FC7F79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F242BFD22EA8227A00FC7F79;
+			remoteInfo = com.cameo.CameoPOC.Clip;
+		};
+		F242BFEC2EA8227C00FC7F79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F242BF9D2EA820F100FC7F79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F242BFD22EA8227A00FC7F79;
+			remoteInfo = com.cameo.CameoPOC.Clip;
+		};
+		F242BFF32EA8227C00FC7F79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F242BF9D2EA820F100FC7F79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F242BFD22EA8227A00FC7F79;
+			remoteInfo = com.cameo.CameoPOC.Clip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F242BFFA2EA8227C00FC7F79 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				F242BFF52EA8227C00FC7F79 /* com.cameo.CameoPOC.Clip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F242BFA52EA820F100FC7F79 /* CameoPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameoPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F242BFB22EA820F200FC7F79 /* CameoPOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameoPOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F242BFBC2EA820F200FC7F79 /* CameoPOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameoPOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F242BFD32EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.cameo.CameoPOC.Clip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F242BFE12EA8227B00FC7F79 /* com.cameo.CameoPOC.ClipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = com.cameo.CameoPOC.ClipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F242BFEB2EA8227C00FC7F79 /* com.cameo.CameoPOC.ClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = com.cameo.CameoPOC.ClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F242BFF62EA8227C00FC7F79 /* Exceptions for "com.cameo.CameoPOC.Clip" folder in "com.cameo.CameoPOC.Clip" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F242BFD22EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F242BFA72EA820F100FC7F79 /* CameoPOC */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CameoPOC;
+			sourceTree = "<group>";
+		};
+		F242BFB52EA820F200FC7F79 /* CameoPOCTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CameoPOCTests;
+			sourceTree = "<group>";
+		};
+		F242BFBF2EA820F200FC7F79 /* CameoPOCUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CameoPOCUITests;
+			sourceTree = "<group>";
+		};
+		F242BFD42EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F242BFF62EA8227C00FC7F79 /* Exceptions for "com.cameo.CameoPOC.Clip" folder in "com.cameo.CameoPOC.Clip" target */,
+			);
+			path = com.cameo.CameoPOC.Clip;
+			sourceTree = "<group>";
+		};
+		F242BFE42EA8227B00FC7F79 /* com.cameo.CameoPOC.ClipTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = com.cameo.CameoPOC.ClipTests;
+			sourceTree = "<group>";
+		};
+		F242BFEE2EA8227C00FC7F79 /* com.cameo.CameoPOC.ClipUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = com.cameo.CameoPOC.ClipUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F242BFA22EA820F100FC7F79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFAF2EA820F200FC7F79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFB92EA820F200FC7F79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFD02EA8227A00FC7F79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFDE2EA8227B00FC7F79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFE82EA8227C00FC7F79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F242BF9C2EA820F100FC7F79 = {
+			isa = PBXGroup;
+			children = (
+				F242BFA72EA820F100FC7F79 /* CameoPOC */,
+				F242BFB52EA820F200FC7F79 /* CameoPOCTests */,
+				F242BFBF2EA820F200FC7F79 /* CameoPOCUITests */,
+				F242BFD42EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */,
+				F242BFE42EA8227B00FC7F79 /* com.cameo.CameoPOC.ClipTests */,
+				F242BFEE2EA8227C00FC7F79 /* com.cameo.CameoPOC.ClipUITests */,
+				F242BFA62EA820F100FC7F79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F242BFA62EA820F100FC7F79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F242BFA52EA820F100FC7F79 /* CameoPOC.app */,
+				F242BFB22EA820F200FC7F79 /* CameoPOCTests.xctest */,
+				F242BFBC2EA820F200FC7F79 /* CameoPOCUITests.xctest */,
+				F242BFD32EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip.app */,
+				F242BFE12EA8227B00FC7F79 /* com.cameo.CameoPOC.ClipTests.xctest */,
+				F242BFEB2EA8227C00FC7F79 /* com.cameo.CameoPOC.ClipUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F242BFA42EA820F100FC7F79 /* CameoPOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F242BFC62EA820F200FC7F79 /* Build configuration list for PBXNativeTarget "CameoPOC" */;
+			buildPhases = (
+				F242BFA12EA820F100FC7F79 /* Sources */,
+				F242BFA22EA820F100FC7F79 /* Frameworks */,
+				F242BFA32EA820F100FC7F79 /* Resources */,
+				F242BFFA2EA8227C00FC7F79 /* Embed App Clips */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F242BFF42EA8227C00FC7F79 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F242BFA72EA820F100FC7F79 /* CameoPOC */,
+			);
+			name = CameoPOC;
+			packageProductDependencies = (
+			);
+			productName = CameoPOC;
+			productReference = F242BFA52EA820F100FC7F79 /* CameoPOC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F242BFB12EA820F200FC7F79 /* CameoPOCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F242BFC92EA820F200FC7F79 /* Build configuration list for PBXNativeTarget "CameoPOCTests" */;
+			buildPhases = (
+				F242BFAE2EA820F200FC7F79 /* Sources */,
+				F242BFAF2EA820F200FC7F79 /* Frameworks */,
+				F242BFB02EA820F200FC7F79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F242BFB42EA820F200FC7F79 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F242BFB52EA820F200FC7F79 /* CameoPOCTests */,
+			);
+			name = CameoPOCTests;
+			packageProductDependencies = (
+			);
+			productName = CameoPOCTests;
+			productReference = F242BFB22EA820F200FC7F79 /* CameoPOCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F242BFBB2EA820F200FC7F79 /* CameoPOCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F242BFCC2EA820F200FC7F79 /* Build configuration list for PBXNativeTarget "CameoPOCUITests" */;
+			buildPhases = (
+				F242BFB82EA820F200FC7F79 /* Sources */,
+				F242BFB92EA820F200FC7F79 /* Frameworks */,
+				F242BFBA2EA820F200FC7F79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F242BFBE2EA820F200FC7F79 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F242BFBF2EA820F200FC7F79 /* CameoPOCUITests */,
+			);
+			name = CameoPOCUITests;
+			packageProductDependencies = (
+			);
+			productName = CameoPOCUITests;
+			productReference = F242BFBC2EA820F200FC7F79 /* CameoPOCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F242BFD22EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F242BFF72EA8227C00FC7F79 /* Build configuration list for PBXNativeTarget "com.cameo.CameoPOC.Clip" */;
+			buildPhases = (
+				F242BFCF2EA8227A00FC7F79 /* Sources */,
+				F242BFD02EA8227A00FC7F79 /* Frameworks */,
+				F242BFD12EA8227A00FC7F79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F242BFD42EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */,
+			);
+			name = com.cameo.CameoPOC.Clip;
+			packageProductDependencies = (
+			);
+			productName = com.cameo.CameoPOC.Clip;
+			productReference = F242BFD32EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
+		F242BFE02EA8227B00FC7F79 /* com.cameo.CameoPOC.ClipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F242BFFB2EA8227C00FC7F79 /* Build configuration list for PBXNativeTarget "com.cameo.CameoPOC.ClipTests" */;
+			buildPhases = (
+				F242BFDD2EA8227B00FC7F79 /* Sources */,
+				F242BFDE2EA8227B00FC7F79 /* Frameworks */,
+				F242BFDF2EA8227B00FC7F79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F242BFE32EA8227B00FC7F79 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F242BFE42EA8227B00FC7F79 /* com.cameo.CameoPOC.ClipTests */,
+			);
+			name = com.cameo.CameoPOC.ClipTests;
+			packageProductDependencies = (
+			);
+			productName = com.cameo.CameoPOC.ClipTests;
+			productReference = F242BFE12EA8227B00FC7F79 /* com.cameo.CameoPOC.ClipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F242BFEA2EA8227C00FC7F79 /* com.cameo.CameoPOC.ClipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F242BFFE2EA8227C00FC7F79 /* Build configuration list for PBXNativeTarget "com.cameo.CameoPOC.ClipUITests" */;
+			buildPhases = (
+				F242BFE72EA8227C00FC7F79 /* Sources */,
+				F242BFE82EA8227C00FC7F79 /* Frameworks */,
+				F242BFE92EA8227C00FC7F79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F242BFED2EA8227C00FC7F79 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F242BFEE2EA8227C00FC7F79 /* com.cameo.CameoPOC.ClipUITests */,
+			);
+			name = com.cameo.CameoPOC.ClipUITests;
+			packageProductDependencies = (
+			);
+			productName = com.cameo.CameoPOC.ClipUITests;
+			productReference = F242BFEB2EA8227C00FC7F79 /* com.cameo.CameoPOC.ClipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F242BF9D2EA820F100FC7F79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					F242BFA42EA820F100FC7F79 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					F242BFB12EA820F200FC7F79 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = F242BFA42EA820F100FC7F79;
+					};
+					F242BFBB2EA820F200FC7F79 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = F242BFA42EA820F100FC7F79;
+					};
+					F242BFD22EA8227A00FC7F79 = {
+						CreatedOnToolsVersion = 26.0;
+						LastSwiftMigration = 2600;
+					};
+					F242BFE02EA8227B00FC7F79 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = F242BFD22EA8227A00FC7F79;
+					};
+					F242BFEA2EA8227C00FC7F79 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = F242BFD22EA8227A00FC7F79;
+					};
+				};
+			};
+			buildConfigurationList = F242BFA02EA820F100FC7F79 /* Build configuration list for PBXProject "CameoPOC" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F242BF9C2EA820F100FC7F79;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F242BFA62EA820F100FC7F79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F242BFA42EA820F100FC7F79 /* CameoPOC */,
+				F242BFB12EA820F200FC7F79 /* CameoPOCTests */,
+				F242BFBB2EA820F200FC7F79 /* CameoPOCUITests */,
+				F242BFD22EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */,
+				F242BFE02EA8227B00FC7F79 /* com.cameo.CameoPOC.ClipTests */,
+				F242BFEA2EA8227C00FC7F79 /* com.cameo.CameoPOC.ClipUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F242BFA32EA820F100FC7F79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFB02EA820F200FC7F79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFBA2EA820F200FC7F79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFD12EA8227A00FC7F79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFDF2EA8227B00FC7F79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFE92EA8227C00FC7F79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F242BFA12EA820F100FC7F79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFAE2EA820F200FC7F79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFB82EA820F200FC7F79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFCF2EA8227A00FC7F79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFDD2EA8227B00FC7F79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F242BFE72EA8227C00FC7F79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F242BFB42EA820F200FC7F79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F242BFA42EA820F100FC7F79 /* CameoPOC */;
+			targetProxy = F242BFB32EA820F200FC7F79 /* PBXContainerItemProxy */;
+		};
+		F242BFBE2EA820F200FC7F79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F242BFA42EA820F100FC7F79 /* CameoPOC */;
+			targetProxy = F242BFBD2EA820F200FC7F79 /* PBXContainerItemProxy */;
+		};
+		F242BFE32EA8227B00FC7F79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F242BFD22EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */;
+			targetProxy = F242BFE22EA8227B00FC7F79 /* PBXContainerItemProxy */;
+		};
+		F242BFED2EA8227C00FC7F79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F242BFD22EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */;
+			targetProxy = F242BFEC2EA8227C00FC7F79 /* PBXContainerItemProxy */;
+		};
+		F242BFF42EA8227C00FC7F79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F242BFD22EA8227A00FC7F79 /* com.cameo.CameoPOC.Clip */;
+			targetProxy = F242BFF32EA8227C00FC7F79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F242BFC42EA820F200FC7F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F242BFC52EA820F200FC7F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F242BFC72EA820F200FC7F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameo.CameoPOC.CameoPOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F242BFC82EA820F200FC7F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameo.CameoPOC.CameoPOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F242BFCA2EA820F200FC7F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameo.CameoPOC.CameoPOCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameoPOC.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CameoPOC";
+			};
+			name = Debug;
+		};
+		F242BFCB2EA820F200FC7F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameo.CameoPOC.CameoPOCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameoPOC.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CameoPOC";
+			};
+			name = Release;
+		};
+		F242BFCD2EA820F200FC7F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameo.CameoPOC.CameoPOCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CameoPOC;
+			};
+			name = Debug;
+		};
+		F242BFCE2EA820F200FC7F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameo.CameoPOC.CameoPOCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CameoPOC;
+			};
+			name = Release;
+		};
+		F242BFF82EA8227C00FC7F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = com.cameo.CameoPOC.Clip/com_cameo_CameoPOC_Clip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = com.cameo.CameoPOC.Clip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CameoPOC;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameo.CameoPOC.CameoPOC.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "com.cameo.CameoPOC.Clip/com.cameo.CameoPOC.Clip-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F242BFF92EA8227C00FC7F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = com.cameo.CameoPOC.Clip/com_cameo_CameoPOC_Clip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = com.cameo.CameoPOC.Clip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CameoPOC;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameo.CameoPOC.CameoPOC.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "com.cameo.CameoPOC.Clip/com.cameo.CameoPOC.Clip-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F242BFFC2EA8227C00FC7F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cameo.CameoPOC.CameoPOC.com-cameo-CameoPOC-ClipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/com.cameo.CameoPOC.Clip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/com.cameo.CameoPOC.Clip";
+			};
+			name = Debug;
+		};
+		F242BFFD2EA8227C00FC7F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cameo.CameoPOC.CameoPOC.com-cameo-CameoPOC-ClipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/com.cameo.CameoPOC.Clip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/com.cameo.CameoPOC.Clip";
+			};
+			name = Release;
+		};
+		F242BFFF2EA8227C00FC7F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cameo.CameoPOC.CameoPOC.com-cameo-CameoPOC-ClipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = com.cameo.CameoPOC.Clip;
+			};
+			name = Debug;
+		};
+		F242C0002EA8227C00FC7F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYAM7RKG36;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cameo.CameoPOC.CameoPOC.com-cameo-CameoPOC-ClipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = com.cameo.CameoPOC.Clip;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F242BFA02EA820F100FC7F79 /* Build configuration list for PBXProject "CameoPOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F242BFC42EA820F200FC7F79 /* Debug */,
+				F242BFC52EA820F200FC7F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F242BFC62EA820F200FC7F79 /* Build configuration list for PBXNativeTarget "CameoPOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F242BFC72EA820F200FC7F79 /* Debug */,
+				F242BFC82EA820F200FC7F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F242BFC92EA820F200FC7F79 /* Build configuration list for PBXNativeTarget "CameoPOCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F242BFCA2EA820F200FC7F79 /* Debug */,
+				F242BFCB2EA820F200FC7F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F242BFCC2EA820F200FC7F79 /* Build configuration list for PBXNativeTarget "CameoPOCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F242BFCD2EA820F200FC7F79 /* Debug */,
+				F242BFCE2EA820F200FC7F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F242BFF72EA8227C00FC7F79 /* Build configuration list for PBXNativeTarget "com.cameo.CameoPOC.Clip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F242BFF82EA8227C00FC7F79 /* Debug */,
+				F242BFF92EA8227C00FC7F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F242BFFB2EA8227C00FC7F79 /* Build configuration list for PBXNativeTarget "com.cameo.CameoPOC.ClipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F242BFFC2EA8227C00FC7F79 /* Debug */,
+				F242BFFD2EA8227C00FC7F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F242BFFE2EA8227C00FC7F79 /* Build configuration list for PBXNativeTarget "com.cameo.CameoPOC.ClipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F242BFFF2EA8227C00FC7F79 /* Debug */,
+				F242C0002EA8227C00FC7F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F242BF9D2EA820F100FC7F79 /* Project object */;
+}
