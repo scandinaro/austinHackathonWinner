@@ -123,32 +123,31 @@ struct PostVideoActionsView: View {
     let onReplay: () -> Void
 
     var body: some View {
-        VStack(spacing: 24) {
+        VStack(spacing: 0) {
+            // Header at top
+            VStack(spacing: 12) {
+                Image(systemName: "star.fill")
+                    .font(.system(size: 60))
+                    .foregroundColor(.yellow)
+                    .shadow(radius: 10)
+
+                Text("Keep this Cameo forever")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+            }
+            .padding(.top, 60)
+
             Spacer()
 
-            Image(systemName: "star.fill")
-                .font(.system(size: 60))
-                .foregroundColor(.yellow)
-                .shadow(radius: 10)
-
-            Text("✨ Want to keep this Cameo forever?")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-
-            Text("Download the Cameo app to save this video and order personalized videos from thousands of celebrities")
-                .font(.body)
-                .foregroundColor(.white.opacity(0.9))
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-
+            // CTAs at bottom
             VStack(spacing: 12) {
                 Button(action: onDownload) {
                     HStack {
                         Image(systemName: "arrow.down.circle.fill")
                             .font(.title3)
-                        Text("Download & Save Video")
+                        Text("Save Video")
                             .fontWeight(.semibold)
                     }
                     .frame(maxWidth: .infinity)
@@ -177,10 +176,8 @@ struct PostVideoActionsView: View {
                 }
             }
             .padding(.horizontal, 32)
-
-            Spacer()
+            .padding(.bottom, 40)
         }
-        .padding()
     }
 }
 
