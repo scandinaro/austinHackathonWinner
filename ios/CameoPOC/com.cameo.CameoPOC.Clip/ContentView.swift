@@ -192,6 +192,7 @@ struct GiftUnwrapView: View {
     @State private var revealPercentage: Double = 0
     @State private var thumbnail: UIImage?
     @State private var hasStartedRevealing = false
+    @State private var revealedCells: Set<String> = [] // Track unique grid cells for accurate percentage
 
     var body: some View {
         GeometryReader { geometry in
@@ -237,23 +238,42 @@ struct GiftUnwrapView: View {
                                 hasStartedRevealing = true
                             }
 
-                            // Add revealed point (sample every few points to avoid massive overlap)
-                            let lastPoint = revealedPoints.last
-                            let shouldAddPoint = lastPoint == nil ||
-                                sqrt(pow(value.location.x - lastPoint!.x, 2) + pow(value.location.y - lastPoint!.y, 2)) > 20
+                            // Add revealed point and interpolate between last point for smooth lines
+                            if let lastPoint = revealedPoints.last {
+                                let distance = sqrt(pow(value.location.x - lastPoint.x, 2) + pow(value.location.y - lastPoint.y, 2))
 
-                            if shouldAddPoint {
+                                // Interpolate points between last and current for smooth connection
+                                if distance > 5 {
+                                    let steps = Int(distance / 5)
+                                    for i in 1...steps {
+                                        let t = CGFloat(i) / CGFloat(steps)
+                                        let interpolatedPoint = CGPoint(
+                                            x: lastPoint.x + (value.location.x - lastPoint.x) * t,
+                                            y: lastPoint.y + (value.location.y - lastPoint.y) * t
+                                        )
+                                        revealedPoints.append(interpolatedPoint)
+
+                                        // Track unique 50x50 grid cells for accurate percentage calculation
+                                        let cellX = Int(interpolatedPoint.x / 50)
+                                        let cellY = Int(interpolatedPoint.y / 50)
+                                        revealedCells.insert("\(cellX),\(cellY)")
+                                    }
+                                }
+                            } else {
                                 revealedPoints.append(value.location)
+                                let cellX = Int(value.location.x / 50)
+                                let cellY = Int(value.location.y / 50)
+                                revealedCells.insert("\(cellX),\(cellY)")
                             }
 
-                            // Calculate reveal percentage using circle radius (40) and accounting for overlap
-                            let totalArea = geometry.size.width * geometry.size.height
-                            let circleArea = Double.pi * 40 * 40 // Area of each reveal circle
-                            let revealedArea = Double(revealedPoints.count) * circleArea * 0.7 // 0.7 factor to account for overlap
-                            revealPercentage = min(revealedArea / totalArea, 1.0)
+                            // Calculate reveal percentage based on unique grid cells covered
+                            let totalCellsX = Int(ceil(geometry.size.width / 50))
+                            let totalCellsY = Int(ceil(geometry.size.height / 50))
+                            let totalCells = totalCellsX * totalCellsY
+                            revealPercentage = Double(revealedCells.count) / Double(totalCells)
 
                             // Auto-reveal when threshold reached
-                            if revealPercentage > 0.85 {
+                            if revealPercentage > 0.40 {
                                 withAnimation(.easeOut(duration: 0.8)) {
                                     revealPercentage = 1.0
                                 }
@@ -316,7 +336,7 @@ struct GiftUnwrapView: View {
                 }
 
                 // Progress indicator
-                if hasStartedRevealing && revealPercentage < 0.85 {
+                if hasStartedRevealing && revealPercentage < 0.40 {
                     VStack {
                         HStack {
                             Spacer()
